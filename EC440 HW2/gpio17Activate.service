@@ -1,0 +1,14 @@
+[Unit]
+
+Description= "Activate Deactivate Service"
+
+StopWhenUnneeded= true
+
+[Service]
+
+ExecStart= /home/jackson/activate17.sh
+ExecStop= /home/jackson/deactivate17.sh
+
+Type= simple
+
+RemainAfterExit= true

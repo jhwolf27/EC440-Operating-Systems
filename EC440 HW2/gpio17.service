@@ -1,0 +1,16 @@
+[Unit]
+Description= "Service Unit For Toggle"
+
+Required= gpio17Activate.service
+
+After= gpio17Activate.service
+
+[Service]
+
+Type= oneshot
+
+ExecStart= /home/jackson/toggle17.sh
+
+StartLimitInterval= 10s
+
+StartLimiBust= 30

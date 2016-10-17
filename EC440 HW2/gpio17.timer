@@ -1,0 +1,17 @@
+[Unit]
+
+Description= "Timer for Toggle"
+
+Requires= gpio17Activate.service
+
+After= gpio17Activate.service
+
+[Timer]
+
+Unit= gpio17.service
+
+AccuracySec=1 us
+
+OnActiveSec= 500ms
+
+OnUnitActiveSec= 500ms
